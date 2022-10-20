@@ -43,10 +43,6 @@ if (isset($_POST["register"])) {
                         <label for="key" class="sr-only">Key</label>
                         <input id="key" name="key" type="number" autocomplete="key" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="key" maxlength="2">
                     </div>
-                    <div>
-                        <label for="key" class="sr-only">Key</label>
-                        <input id="key" name="key2" type="number" autocomplete="key" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="key" maxlength="2">
-                    </div>
                 </div>
 
                 <div class="flex items-center justify-between">

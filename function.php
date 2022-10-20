@@ -49,7 +49,7 @@ function register($data)
 
         $hsl = $hsl . $c[$i];
     }
-    $key2 = $data['key2'];
+
     // tambah user baru
     $insert = mysqli_query($conn, "INSERT INTO chaesar (user,password) VALUES('$username','$hsl')");
 
