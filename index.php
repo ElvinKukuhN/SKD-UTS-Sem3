@@ -47,7 +47,7 @@
         <a href="chaesar-login.php" class="btn-get-started scrollto ">User Login</a>
       </div><br>
       <div class="d-flex">
-        <a href="#about" class="btn-get-started scrollto ">Admin Login</a>
+        <a href="login-admin.php" class="btn-get-started scrollto ">Admin Login</a>
       </div>
     </div>
   </section>
