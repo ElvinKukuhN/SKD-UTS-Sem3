@@ -44,10 +44,10 @@
       <h2>Welcome to <span>Login System</span></h2>
       <p>Pilih System Login yang anda inginkan!!!</p>
       <div class="d-flex">
-        <a href="chaesar-login.php" class="btn-get-started scrollto ">Chaesar System</a>
+        <a href="chaesar-login.php" class="btn-get-started scrollto ">User Login</a>
       </div><br>
       <div class="d-flex">
-        <a href="#about" class="btn-get-started scrollto ">Vignere System</a>
+        <a href="#about" class="btn-get-started scrollto ">Admin Login</a>
       </div>
     </div>
   </section>

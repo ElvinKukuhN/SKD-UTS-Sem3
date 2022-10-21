@@ -30,7 +30,7 @@ if (isset($_POST["login"])) {
                 <h2 class="mt-6 text-center text-3xl tracking-tight font-bold text-gray-900">Sign in to your Chaesar account</h2>
 
             </div>
-            <form class="mt-8 space-y-6" action="" method="POST">
+            <form class="mt-8 space-y-6 " action="" method="POST">
                 <input type="hidden" name="remember" value="true">
                 <div class="rounded-md shadow-sm -space-y-px">
                     <div>
