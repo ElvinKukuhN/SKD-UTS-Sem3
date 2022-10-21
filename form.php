@@ -1,3 +1,13 @@
+<?php
+require 'function.php';
+if (isset($_POST["submit"])) {
+
+    enkripsi($_POST);
+
+    $list = mysqli_query($conn, "SELECT * FROM data ");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,7 +35,7 @@
 
         </div>
         <div class="mt-5 md:col-span-2 md:mt-0">
-            <form action="#" method="POST">
+            <form action="" method="POST">
                 <div class="overflow-hidden shadow sm:rounded-md">
                     <div class="bg-white px-4 py-5 sm:p-6">
                         <div class="grid grid-cols-6 gap-6">
@@ -41,12 +51,33 @@
                         </div>
                     </div>
                     <div class="bg-gray-50 px-4 py-3 text-right sm:px-6">
-                        <button type="submit" class="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Save</button>
+                        <button type="submit" name="submit" class="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Save</button>
                     </div>
                 </div>
             </form>
         </div>
     </div>
+    </div>
+
+    <div class="mt-5">
+        <table class="table-auto mx-auto">
+            <thead>
+                <tr>
+                    <th>Nama</th>
+                    <th>Enkripsi Nama</th>
+                    <th>Asal Kota</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($list as $row) : ?>
+                    <tr>
+                        <td><?= $row['nama'] ?></td>
+                        <td><?= $row['enkripsi'] ?></td>
+                        <td><?= $row['kota'] ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
     </div>
 
     <div class="hidden sm:block" aria-hidden="true">

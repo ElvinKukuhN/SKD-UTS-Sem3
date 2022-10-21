@@ -94,6 +94,7 @@ function login($data)
     ?>
         <script>
             alert("anda login");
+            window.location.href = "form.php";
         </script>
     <?php
     } else {
@@ -102,4 +103,42 @@ function login($data)
             alert("Username atau password mungkin salah");
         </script>
 <?php    }
+}
+
+function enkripsi($data)
+{
+    global $conn;
+
+    $name = $data['nama'];
+    $city = $data['asal-kota'];
+    include "lib/lib.php";
+    $nama = str_replace(" ", "", $_POST['nama']);
+    $kota = str_replace(" ", "", $_POST['asal-kota']);
+    $panjang_plain = strlen($nama);
+    $panjang_kunci = strlen($kota);
+    $index_x = 0;
+    $index_y = 0;
+    $hasil_ciper = array();
+    $hasil_akhir = "";
+    while ($index_x < $panjang_plain) {
+        $x = substr($nama, $index_x, 1);
+        $y = substr($kota, $index_y, 1);
+        $hasil_ciper[$index_x] =
+            $tabel_vigenere[huruf_ke_angka($x)][huruf_ke_angka($y)];
+        $index_x++;
+        $index_y++;
+        if ($index_y == $panjang_kunci) {
+            $index_y = 0;
+        }
+    }
+    $i = 0;
+    while ($i < $index_x) {
+        $hasil_akhir .= $hasil_ciper[$i];
+        $i++;
+    }
+
+    $insert = "INSERT INTO data (nama,enkripsi,kota) VALUES('$name','$hasil_akhir','$city')";
+    mysqli_query($conn, $insert);
+
+    return mysqli_affected_rows($conn);
 }
