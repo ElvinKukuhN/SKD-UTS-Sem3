@@ -58,7 +58,7 @@ if (isset($_POST["submit"])) {
         </div>
     </div>
     </div>
-<<<<<<< Updated upstream
+
 
     <div class="mt-5">
         <table class="table-auto mx-auto">
@@ -81,8 +81,8 @@ if (isset($_POST["submit"])) {
         </table>
     </div>
 
-=======
->>>>>>> Stashed changes
+
+
     <div class="hidden sm:block" aria-hidden="true">
         <div class="py-5">
             <div class="border-t border-gray-200"></div>
